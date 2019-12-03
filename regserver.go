@@ -1,4 +1,4 @@
-package main
+package gorouterserver
 
 import (
 	"log"
@@ -7,7 +7,7 @@ import (
 	"github.com/xujiajun/gorouter"
 )
 
-func main() {
+func RegServer() {
 	mux := gorouter.New()
 	//url regex match
 	mux.GET("/user/{id:[0-9]+}", func(w http.ResponseWriter, r *http.Request) {
